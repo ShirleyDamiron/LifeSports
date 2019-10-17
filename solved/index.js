@@ -10,6 +10,7 @@ let uri = ""
 // register middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("client/build"));
 
 const User = require('./models/user.model')
 const Exercise = require('./models/exercise.model')
@@ -26,16 +27,13 @@ Exercise.create([{
 }])
 
 
-
-
-
-
 // Serve up static assets (heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  uri = ""  // connection string for Atlas here  
+  uri = process.env.ATLAS_URI;
+  // connection string for Atlas here  
 } else {
-  uri = "mongodb://localhost/LifeSports"  // connection string for localhost mongo here  
+  uri = process.env.LOCAL_URI;
+  // connection string for localhost mongo here  
 }
 
 // connection to database
