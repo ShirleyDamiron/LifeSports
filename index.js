@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(uri, { 
   useNewUrlParser: true, 
   useCreateIndex: true, 
-  useUnifiedTopology: true }
+  useUnifiedTopology: true, }
   );
   const connection = mongoose.connection;
   connection.once('open', () => {

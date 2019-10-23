@@ -1,0 +1,24 @@
+nav {
+    background: white;
+    width: 100%;
+    text-align: center; 
+    display: inline-block;
+}
+
+.navBrand{
+   color: rgb(25, 25, 230);
+   text-decoration: none;
+   padding: 30px;
+   font-size: 50px;
+}
+
+
+.navLink {
+   font-size: 20px;
+   padding: 20px;
+   text-decoration: none;
+}
+
+.ulContainer {
+   list-style: none;
+}

@@ -1,0 +1,5 @@
+@import "./Partials/_navbar.css";
+@import "./Partials/_createUser.css";
+@import "./Partials/_createExercise.css";
+@import "./Partials/_editExercise.css";
+@import "./Partials/_exerciseList.css";
